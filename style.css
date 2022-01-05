@@ -1,21 +1,119 @@
 body {
+  background-color: #f8f8f8;
   padding: 0;
   margin: 0;
   font-family: "Raleway", sans-serif;
 }
-.menu-bar {
-  position: relative;
+li {
+  display: block;
+  transition-duration: 0.5s;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 0.5rem;
+  right: 0;
+  display: none;
+}
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 8px;
+  display: block;
+}
+ul li ul li {
+  clear: both;
   width: 100%;
-  height: 100vh;
-  background: url(images/my-bg.png);
-  background-position: right bottom;
+}
+li a {
+  font-size: 16px;
+  font-weight: bold;
+  color: #101011;
+  text-decoration: none;
+}
+.menu-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 30px 6.5%;
+}
+.logo {
+  width: 160px;
+  height: 160px;
+  cursor: pointer;
+  margin-right: auto;
+  background-image: url(images/top-banner.png);
   background-repeat: no-repeat;
 }
 .menu-item {
-  padding: 0 100px;
-  width: 100%;
-  height: 80px;
-  box-sizing: border-box;
-  background: rgba(255, 255, 255, 2);
-  box-shadow: 0 10px 15px lightgray;
+  list-style: none;
+}
+.menu-item li {
+  display: inline-block;
+  padding: 0 20px;
+}
+.menu-item li a {
+  transition: all 0.3s ease 0s;
+}
+.menu-item li a:hover {
+  color: #db0d0d;
+}
+h1 {
+  font-size: 60px;
+}
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.text-style {
+  color: #f5435b;
+}
+.second {
+  color: #f5435b;
+}
+p {
+  font-weight: 400;
+}
+.welcome-head {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 300px;
+}
+.bio-section {
+  width: 50%;
+  padding-right: 25%;
+}
+.welcome-head img {
+  width: 50%;
+}
+.about-me {
+  background-image: url(images/dream-bg.png);
+  background-repeat: no-repeat;
+  background-position: right bottom 2%;
+}
+.second-head {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 400px;
+}
+.second-head img {
+  width: 60%;
+  padding-left: 25%;
+}
+.bio-second {
+  width: 40%;
+  padding-left: 25%;
+  padding-right: 15%;
+}
+footer p {
+  text-align: center;
+  font-weight: 700;
 }
